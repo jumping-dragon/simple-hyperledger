@@ -112,24 +112,21 @@ ____
 	First enter the command : 
 	
 	```
-	cd ~/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
+	ls ~/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
 	```
 	
-	And then type in 
-	
-	```
-	ls
-	```
 	to see name of your keyfile which we would need.
-	<img src="images/tut-6.png" width="100%" style="margin-top: 10px;margin-left: 30px;"/>	
+	<img src="images/tut-6.png" width="100%" style="margin-top: 10px;"/>	
 	
 	Copy your key name and paste it into your own [first-network.json](templates/first-network.json), line 40
 	
-	<img src="images/tut-7.png" width="100%" style="margin-top: 10px;margin-left: 30px;"/>	
+	<img src="images/tut-7.png" width="100%" style="margin-top: 10px"/>	
 	
 	Replace the ```{REPLACE THIS WITH YOUR KEYFILE NAME}``` with your own keyfile name : 
 	
-	<img src="images/tut-8.png" width="100%" style="margin-top: 10px;margin-left: 30px;"/>	
+	<img src="images/tut-8.png" width="100%" style="margin-top: 10px;"/>	
+	
+	>**This file will be used on step 5**
 	
 3. Copy the certificates and keys of your network by entering the command : 
 
@@ -151,10 +148,6 @@ ____
 	```
 	rm crypto -r
 	mv crypto-config crypto
-	```
-	and then copy it again for ease of docker-compose :
-	```
-	cp  ~/blockchain-explorer/examples/net1/crypto /tmp/ -r
 	```
 	
 4. After that , we are going to specify the keychains that would identify and authenticate our Fabric Network  :
@@ -210,8 +203,10 @@ CONGRATULATIONS YOU HAVE LEARNED :
 
 2. Connecting to your Hyperledger 1.2 Network thru Fabric Node Client inside an EC2 Instance
 
+3. Next tutorial will walk you through 
+
 ## Clean Up
-To clean up your resources delete the Hyperledger Fabric network managed by Amazon Managed Blockchain and the AWS CloudFormation template as follows:
+To clean up your resources after testing purposes, delete the CloudFormation template :
 
 - In the AWS CloudFormation console **delete the stack** with the stack name `<your network>-Explorer-HLF-Workshop`
 
